@@ -13,9 +13,7 @@ const NoticiasProvider = ({ children }) => {
   };
   useEffect(() => {
     const consultarApi = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=co&category=${categoria}&apiKey=${
-        import.meta.env.VITE_API_KEY
-      }`;
+      const url = `https://newsapi.org/v2/top-headlines?country=co&category=${categoria}&apiKey=ea213fcb88d94d9e8fe6d05ca1b4c1ba`;
       const { data } = await axios(url);
       setNoticias(data.articles);
       setTotalNoticias(data.totalResults);
@@ -25,9 +23,7 @@ const NoticiasProvider = ({ children }) => {
   }, [categoria]);
   useEffect(() => {
     const consultarApi = async () => {
-      const url = `https://newsapi.org/v2/top-headlines?country=co&page=${pagina}&category=${categoria}&apiKey=${
-        import.meta.env.VITE_API_KEY
-      }`;
+      const url = `https://newsapi.org/v2/top-headlines?country=co&page=${pagina}&category=${categoria}&apiKey=ea213fcb88d94d9e8fe6d05ca1b4c1ba`;
       const { data } = await axios(url);
       setNoticias(data.articles);
       setTotalNoticias(data.totalResults);
